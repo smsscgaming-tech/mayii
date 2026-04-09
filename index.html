@@ -1,186 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday Mayiii ❤️</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Happy Birthday Mayii 🎉</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        text-align: center;
-        background: linear-gradient(135deg, #ff758c, #ff7eb3);
-        color: white;
-        overflow-x: hidden;
-    }
+body{
+margin:0;
+font-family: Arial, sans-serif;
+text-align:center;
+color:white;
+overflow:hidden;
+background: linear-gradient(270deg,#a18cd1,#fbc2eb,#fad0c4,#ff9a9e);
+background-size:800% 800%;
+animation:bgMove 15s ease infinite;
+}
 
-    h1 {
-        font-family: 'Great Vibes', cursive;
-        font-size: 3em;
-        margin-top: 20px;
-        animation: glow 2s infinite alternate;
-    }
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
 
-    @keyframes glow {
-        from { text-shadow: 0 0 10px #fff; }
-        to { text-shadow: 0 0 20px #ffe6f2; }
-    }
+.container{
+padding:40px 20px;
+max-width:500px;
+margin:auto;
+position:relative;
+z-index:2;
+}
 
-    .container {
-        padding: 20px;
-    }
+h1{
+font-size:2.2rem;
+animation:glow 2s infinite alternate;
+}
 
-    .message {
-        font-size: 1.2em;
-        max-width: 800px;
-        margin: auto;
-        line-height: 1.6;
-    }
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 30px pink;}
+}
 
-    .countdown {
-        font-size: 1.8em;
-        margin: 20px 0;
-        font-weight: bold;
-    }
+.mayii{
+font-size:40px;
+margin-top:10px;
+animation: nameGlow 1.5s infinite alternate;
+}
 
-    button {
-        background: white;
-        color: #ff4da6;
-        border: none;
-        padding: 12px 25px;
-        font-size: 18px;
-        border-radius: 30px;
-        cursor: pointer;
-        margin: 10px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+@keyframes nameGlow{
+from{letter-spacing:2px; text-shadow:0 0 10px white;}
+to{letter-spacing:6px; text-shadow:0 0 30px yellow;}
+}
 
-    button:hover {
-        background: #ff4da6;
-        color: white;
-    }
+.card{
+background:rgba(255,255,255,0.15);
+padding:25px;
+border-radius:20px;
+backdrop-filter: blur(10px);
+margin-top:20px;
+}
 
-    /* Gallery */
-    .gallery img {
-        width: 260px;
-        max-width: 90%;
-        margin: 10px;
-        border-radius: 15px;
-        border: 4px solid white;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+font-size:16px;
+background:white;
+color:#e84393;
+cursor:pointer;
+}
 
-    /* Popup */
-    .popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.85);
-        justify-content: center;
-        align-items: center;
-    }
+button:hover{transform:scale(1.1);}
 
-    .popup-content {
-        background: white;
-        color: #ff4da6;
-        padding: 30px;
-        border-radius: 20px;
-        text-align: center;
-        animation: pop 0.5s ease-in-out;
-    }
+#slideshow{display:none;margin-top:20px;}
+#slideshow img{
+width:230px;
+border-radius:15px;
+box-shadow:0 0 20px white;
+}
 
-    @keyframes pop {
-        from { transform: scale(0.5); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
+#note{
+display:none;
+margin-top:20px;
+font-size:18px;
+}
 
-    .cake {
-        font-size: 80px;
-    }
-
-    footer {
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    .signature {
-        font-family: 'Great Vibes', cursive;
-        font-size: 1.6em;
-    }
-
-    /* Cake Cutting Animation */
-    .cake-container {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .cake-box {
-        width: 200px;
-        height: 120px;
-        background: #ff69b4;
-        margin: auto;
-        border-radius: 10px;
-        position: relative;
-    }
-
-    .cake-box::before {
-        content: "";
-        position: absolute;
-        width: 200px;
-        height: 40px;
-        background: #fff;
-        top: -20px;
-        border-radius: 10px;
-    }
-
-    .candle {
-        width: 10px;
-        height: 30px;
-        background: orange;
-        position: absolute;
-        top: -50px;
-        left: 95px;
-    }
-
-    .flame {
-        width: 10px;
-        height: 15px;
-        background: yellow;
-        border-radius: 50%;
-        position: absolute;
-        top: -65px;
-        left: 95px;
-        animation: flicker 0.3s infinite alternate;
-    }
-
-    @keyframes flicker {
-        from { opacity: 1; }
-        to { opacity: 0.5; }
-    }
-
-    /* Floating Hearts */
-    .heart {
-        position: fixed;
-        bottom: -10px;
-        font-size: 20px;
-        animation: floatUp 5s linear infinite;
-    }
-
-    @keyframes floatUp {
-        from {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateY(-100vh);
-            opacity: 0;
-        }
-    }
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+}
 </style>
+</head>
+
+<body>
+
+<canvas id="confetti"></canvas>
+
+<audio id="music" loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7b4d5f4f03.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>🎂 Advance Happy Birthday 🎂</h1>
+<div class="mayii">Mayii ✨</div>
+
+<div class="card">
+<p>To my bestii, my sister from another mother 💖</p>
+
+<p>
+Dear Mariyah (Mayii), your birthday is on 24 April,  
+but I couldn't wait to surprise you!
+</p>
+
+<button onclick="startSurprise()">Click for Surprise 🎉</button>
+
+<div id="slideshow">
+<img id="slideImg" src="photo1.jpg">
+</div>
+
+<div id="note">
+💌 Mayii, thank you for always being there like a sister.  
+I wish you happiness, success and smiles forever.  
+Happy Birthday in advance! 🎂✨
+</div>
+
+</div>
+</div>
+
+<script>
+function startSurprise(){
+document.getElementById("music").play();
+document.getElementById("slideshow").style.display="block";
+
+let photos=["photo1.jpg"blob:https://web.whatsapp.com/ca58d6ec-1398-442c-b4e9-d206a5d65ac3;
+,"photo2.jpg"]blob:https://web.whatsapp.com/3b11b911-c2d3-4d79-b3e6-9abd3fb062a8;
+let index=0;
+
+setInterval(()=>{
+index=(index+1)%photos.length;
+document.getElementById("slideImg").src=photos[index];
+},2000);
+
+setTimeout(()=>{
+document.getElementById("note").style.display="block";
+},6000);
+
+heartBurst();
+}
+
+/* hearts */
+function heartBurst(){
+for(let i=0;i<35;i++){
+let h=document.createElement("div");
+h.innerHTML="💖";
+h.style.position="fixed";
+h.style.left=Math.random()*100+"vw";
+h.style.top=Math.random()*100+"vh";
+h.style.fontSize="25px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),2000);
+}
+}
+
+/* confetti */
+const canvas=document.getElementById("confetti");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let pieces=[];
+for(let i=0;i<120;i++){
+pieces.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*6+2,
+d:Math.random()*100,
+color:`hsl(${Math.random()*360},70%,60%)`
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+for(let i=0;i<pieces.length;i++){
+let p=pieces[i];
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle=p.color;
+ctx.fill();
+}
+update();
+}
+
+let angle=0;
+function update(){
+angle+=0.01;
+for(let i=0;i<pieces.length;i++){
+let p=pieces[i];
+p.y+=Math.cos(angle+p.d)+1+p.r/2;
+if(p.y>canvas.height){
+p.y=0;
+p.x=Math.random()*canvas.width;
+}
+}
+}
+
+setInterval(draw,20);
+</script>
+
+</body>
+</html>
